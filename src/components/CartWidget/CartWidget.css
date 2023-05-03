@@ -1,0 +1,19 @@
+.sectCart {
+    width: 6rem;
+    height: 3rem;
+    color: orange;
+    text-shadow: black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px,
+        black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px;
+}
+
+.imgCart {
+    width: 4rem;
+    mix-blend-mode: hard-light;
+    filter: drop-shadow(-2px 2px 1px rgb(255, 196, 0));
+}

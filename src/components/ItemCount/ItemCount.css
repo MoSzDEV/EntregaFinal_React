@@ -1,0 +1,81 @@
+.count {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: orange;
+    text-shadow: black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px,
+        black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px;
+    font-weight: bold;
+    width: 90%;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 10px;
+    opacity: 90%;
+}
+
+.btnCart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-width: 15%;
+    max-width: 80%;
+    color: orange;
+    text-shadow: black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px,
+        black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px;
+    font-size: calc(0.6rem + 0.1vw);
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 1px;
+    opacity: 90%;
+}
+
+.countCart {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: orange;
+    text-shadow: black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px,
+        black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px;
+    font-size: calc(0.7rem + 0.4vw);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    opacity: 90%;
+}
+
+@media screen and (max-width: 800px) {
+
+    .btnCart {
+        font-size: calc(0.6rem + 0.6vw);
+    }
+
+    .countCart {
+        font-size: calc(0.6rem + 0.6vw);
+    }
+
+
+}

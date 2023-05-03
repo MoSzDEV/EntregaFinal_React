@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 87, 64) rgb(121, 0, 182);
+    text-decoration: none;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgb(121, 0, 182);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(162, 108, 0);
+    border-radius: 20px;
+    border: 1px solid rgb(162, 108, 0);
+  }
+
+@media screen and (min-width: 800px){
+header {
+    display: grid;
+    grid-template-columns:  2fr 5fr 2fr;
+    grid-template-areas: "a b c";
+    place-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    box-shadow: rgb(90, 10, 164) -10px 10px 10px;
+    background-image: url(https://www.xtrafondos.com/descargar.php?id=9897&resolucion=2560x1440);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: top;
+}
+
+.logName {
+    grid-area: a;
+    font-size: calc(2rem + 1vw);
+    text-decoration: none;
+    margin-left: 20px;
+    color: orange;
+    text-shadow: black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px,
+        black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px;
+}
+li{
+    grid-area: b;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.navLinks {
+    display: inline-block;
+    font-size: calc(1rem + 1vw);
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-right: 3rem;
+    margin-left: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+    color: orange;
+    text-shadow: black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px,
+        black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px;
+}
+
+.activeNavLinks {
+    display: inline-block;
+    font-size: calc(1rem + 1.1vw);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(255, 123, 0, 0.996);
+    text-shadow: black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px,
+        black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px,
+        black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px,
+        black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px;
+}
+
+.shopCart {
+    display: grid;
+    grid-area: c;
+    justify-content: right;
+    color: white;
+    margin: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+}
+@media screen and (max-width: 800px){
+    header {
+        display:flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        box-shadow: rgb(90, 10, 164) -10px 10px 10px;
+        background-image: url(https://www.xtrafondos.com/descargar.php?id=9897&resolucion=2560x1440);
+        background-repeat:space;
+    }
+    
+    .logName {
+        font-size: calc(2rem + 1vw);
+        text-decoration: none;
+        margin-top: 30px;
+        margin-left: 30px;
+        color: orange;
+        text-shadow: black 1px 1px 2px,
+            black -1px 1px 2px,
+            black 1px -1px 2px,
+            black -1px -1px 2px,
+            black 1px 1px 2px,
+            black -1px 1px 2px,
+            black 1px -1px 2px,
+            black -1px -1px 2px;
+    }
+    ul{
+        display: flex;
+        flex-direction:column;
+        margin-top: 30px;
+        margin-left: 30px;
+        text-decoration: none;
+    }
+    li{
+        text-decoration: none;
+    }
+
+    .navLinks {
+        display: flex;
+        font-size: calc(2rem + 1vw);
+        font-weight: bold;
+        text-decoration: none;
+        margin: 0.6rem;
+        padding: 0.2rem;
+        cursor: pointer;
+        color: orange;
+        text-shadow: black 1px 1px 2px,
+            black -1px 1px 2px,
+            black 1px -1px 2px,
+            black -1px -1px 2px,
+            black 1px 1px 2px,
+            black -1px 1px 2px,
+            black 1px -1px 2px,
+            black -1px -1px 2px;
+    }
+    
+    .shopCart {
+        display: grid;
+        justify-content: right;
+        color: white;
+        margin: 15px;
+        padding: 10px;
+        cursor: pointer;
+    }
+    }
