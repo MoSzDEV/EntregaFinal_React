@@ -4,11 +4,6 @@ import './ItemCount.css'
 const ItemCount = ({ stock, initial, fnAdd }) => {
     const [counter, setCounter] = useState(initial);
 
-    useEffect(() => {
-        document.title = `Beneficios por mayor!!`;
-
-
-    }, [counter]);
 
     const increaseCounter = () => {
         if (counter < stock) {

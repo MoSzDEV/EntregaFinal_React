@@ -12,7 +12,7 @@ const Item = ({ id, nombre, precio, img, stock }) => {
 
   const handlerAmount = (cant) => {
     setAddAmount(cant);
-    const item = { id, nombre, precio, img };
+    const item = { id, nombre, precio, img , stock};
     addItem(item, cant);
   }
 
@@ -26,7 +26,7 @@ const Item = ({ id, nombre, precio, img, stock }) => {
       <Link to={`/item/${id}`} className='btnProducto'> Ver Detalles </Link>
       {
         addAmount > 0
-          ? <><button className="btnCart"><Link to="/cart"> Ver carrito </Link></button> <button className="btnCart"> Eliminar de carrito </button></>
+          ? <><button className="btnProducto"><Link to="/cart">En carrito 🛒</Link></button></>
           : <ItemCount stock={stock} initial={1} fnAdd={handlerAmount} />
       }
     </div>

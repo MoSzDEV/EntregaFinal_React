@@ -19,6 +19,8 @@ const ItemListContainer = () => {
       })
   }, [idCategory])
 
+
+
   return (
     <div>
       <h2 className='products'>Productos personalizados</h2>

@@ -12,7 +12,7 @@ const ItemDetail = ({ nombre, precio, id, img, desc, stock }) => {
 
     const handlerAmount = (cant) =>{
         setAddAmount(cant);
-        const item = {id, nombre, precio, img};
+        const item = {id, nombre, precio, img, stock};
         addItem(item, cant);
     }
 

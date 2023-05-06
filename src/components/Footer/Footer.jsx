@@ -4,7 +4,7 @@ import './Footer.css'
 const Footer = () => {
   return (
     <>
-    <footer>
+    <footer className='footer'>
         <div className="myfoot">
             <span className="copyright">
                 Powered by MoSz

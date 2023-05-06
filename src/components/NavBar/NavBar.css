@@ -4,6 +4,7 @@
     scrollbar-width: thin;
     scrollbar-color: rgb(0, 87, 64) rgb(121, 0, 182);
     text-decoration: none;
+    color:inherit;
   }
   
   *::-webkit-scrollbar {
@@ -19,6 +20,16 @@
     border-radius: 20px;
     border: 1px solid rgb(162, 108, 0);
   }
+
+  #root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  Link{
+    text-decoration: none;
+  }
+
 
 @media screen and (min-width: 800px){
 header {

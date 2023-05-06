@@ -47,8 +47,13 @@ export const ProviderCart = ({children}) => {
         return cart.filter(prod => prod.item.id !== id)
     }
 
+    const checkStock = (id) => {
+        const seeStock = cart.find(prod => prod.item.id === id)
+        return seeStock.item.stock;
+    }
+
     return (
-        <ContextCart.Provider value={{cart, addItem, removeItem, emptyCart}}>
+        <ContextCart.Provider value={{cart, addItem, removeItem, emptyCart, checkStock}}>
             {children}
         </ContextCart.Provider>
     )
