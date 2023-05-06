@@ -13,7 +13,7 @@ const Cart = () => {
     if(totalCount === 0){
         return(
             <>
-                <Link to="/">Agregar productos</Link>
+                <Link to="/" className="message">Agregar productos 🎨</Link>
             </>
         )
 
@@ -24,10 +24,10 @@ const Cart = () => {
             {cart.map(product => <CartItems key={product.id} {...product}/>)}
         </div>
         <div className='cart'>
-            <h3>total: ${total}</h3>
-            <button className='btnProducto' onClick={emptyCart}>Vaciar carrito</button>
-            <Link to='/'><button className='btnProducto'>Agregar productos</button></Link>
-            <Link to='/checkout'><button className='btnProducto'>Finalizar compra</button></Link>
+            <h3 className='totalProductoCart'>Total: ${total}</h3>
+            <button className='btnProductoCart' onClick={emptyCart}>Vaciar carrito</button>
+            <Link to='/'><button className='btnProductoCart'>Agregar productos</button></Link>
+            <Link to='/checkout'><button className='btnProductoCart'>Finalizar compra</button></Link>
         </div>
         </>
     )
