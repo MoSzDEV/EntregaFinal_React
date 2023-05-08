@@ -4,18 +4,6 @@ import { ContextCart } from '../../context/Contextcart'
 import { db } from '../../services/firebase/config'
 import { collection, doc, addDoc, updateDoc } from 'firebase/firestore'
 import './Checkout.css'
-import Toastify from 'toastify-js'
-import "toastify-js/src/toastify.css"
-
-const discountStock = (err, id, stock, sellItems) => {
-    if (err === "") {
-        const productOut = doc(db, "products", id)
-        updateDoc(productOut, {
-            stock: stock - sellItems,
-        })
-    }
-    return;
-}
 
 
 const Checkout = () => {
@@ -28,7 +16,17 @@ const Checkout = () => {
     const [emailCheck, setEmailCheck] = useState("");
     const [error, setError] = useState("");
     const [orderId, setOrderId] = useState("");
+    const [loading, setLoading] = useState(false);
 
+    const discountStock = (err, id, stock, sellItems) => {
+        if (err === "") {
+            const productOut = doc(db, "products", id)
+            updateDoc(productOut, {
+                stock: stock - sellItems,
+            })
+        }
+        return;
+    }
 
     const handleSumbit = (e) => {
         e.preventDefault();
@@ -55,6 +53,8 @@ const Checkout = () => {
             email,
         }
 
+        setLoading(true);
+
         addDoc(collection(db, "ordenes"), orden)
             .then((docRef) => {
                 setOrderId(docRef.id);
@@ -62,7 +62,7 @@ const Checkout = () => {
                     id: docRef.id
                 })
                 emptyCart();
-
+                setLoading(false);
             })
             .catch((err) => {
                 console.error("Error al crear la orden, por favor revise la info, aguarde un instante y vuelva a enviar la solicitud", { err })
@@ -120,9 +120,10 @@ const Checkout = () => {
                 </div>
             </form>
             <div className='checkoutDetail'>
-                {error && <p style={{color: "red"}}> {error} </p>}
+                {loading && <p>Cargando...</p>}
+                {error && <p style={{ color: "red" }}> {error} </p>}
                 {orderId &&
-                    <>
+                    <>  
                         <strong> Gracias por tu compra, tu numero de orden es {orderId} </strong>
                         <button className='btnProductoConfirm'><Link to={`/checkoutDetail/${orderId}`} > Ver detalle </Link></button>
                     </>

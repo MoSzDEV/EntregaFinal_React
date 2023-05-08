@@ -22,7 +22,7 @@ const CheckoutDetail = () => {
             <div className='ticketDetail'>
                 {
                     orders.map(e =>
-                        <>
+                        <div key={e.id}>
                             <h1>Detalle de compra 💳</h1>
                             <h2>Orden N°: {e.id}</h2>
                             <p>Nombre: {e.name}</p>
@@ -34,7 +34,7 @@ const CheckoutDetail = () => {
                             )
                             }
                             <h3>Total: ${e.total}</h3>
-                        </>
+                        </div>
                     )
                 }
             </div>
