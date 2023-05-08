@@ -8,11 +8,11 @@ const ItemDetail = ({ nombre, precio, id, img, desc, stock }) => {
 
     const [addAmount, setAddAmount] = useState(0);
 
-    const {addItem} = useContext(ContextCart);
+    const { addItem } = useContext(ContextCart);
 
-    const handlerAmount = (cant) =>{
+    const handlerAmount = (cant) => {
         setAddAmount(cant);
-        const item = {id, nombre, precio, img, stock};
+        const item = { id, nombre, precio, img, stock };
         addItem(item, cant);
     }
 
@@ -20,18 +20,18 @@ const ItemDetail = ({ nombre, precio, id, img, desc, stock }) => {
         <>
             <div className='contenedorGroupDetail'>
                 <div className='contenedorItemDetail'>
+                    <img className='imgProductoDetail' src={img} alt={nombre} />
+                </div>
+                <div className='contenedorItemDetail'>
                     <p>{nombre}</p>
                     <p>$ {precio},⁰⁰ </p>
                     <p>SKU: {id} </p>
                     <p>Descripcion: {desc} </p>
-                </div>
-                <div className='contenedorItemDetail'>
-                    <img className='imgProductoDetail' src={img} alt={nombre} />
-                {
-                    addAmount > 0 
-                    ? <button className="btnCart"><Link  to="/cart">  Ver carrito </Link></button>
-                    : <ItemCount stock={stock} initial={1} fnAdd={handlerAmount} />
-                }
+                    {
+                        addAmount > 0
+                            ? <><button className="btnProducto"><Link to="/cart">En carrito 🛒</Link></button></>
+                            : <div className='contenedorItemCount' ><ItemCount stock={stock} initial={1} fnAdd={handlerAmount} /></div>
+                    }
                 </div>
             </div>
         </>
