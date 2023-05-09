@@ -21,7 +21,7 @@ const ItemListContainer = () => {
       setLoading(false);})
   }, [idCategory])
 
-
+  
 
   return (
     <div>
