@@ -24,7 +24,7 @@ const CheckoutDetail = () => {
         <div className='ticket'>
 
             <div className='ticketDetail'>
-                        {loading && <div style={{marginTop: "5rem"}}><Loading/></div>}
+                        {loading && <div style={{marginTop: "5rem"}}><Loading shape={ "line" }/></div>}
                 {
                         orders.map(e =>
                         <div key={e.id}>

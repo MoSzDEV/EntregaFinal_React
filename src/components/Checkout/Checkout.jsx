@@ -115,18 +115,18 @@ const Checkout = () => {
                     <label htmlFor="">Confirmar Email:</label>
                     <input type="email" value={emailCheck} onChange={(e) => setEmailCheck(e.target.value)} />
                     <div className='confirm'>
-                        <button className='btnProductoConfirm'><Link to="/cart">Editar carrito</Link></button>
-                        <button className='btnProductoConfirm' type='submit'>Finalizar compra</button>
+                    <button className='btnProductoConfirm'> <Link to="/cart">Editar carrito</Link></button>
+                    <button className='btnProductoConfirm' type='submit'>Finalizar compra</button>
                     </div>
                 </div>
             </form>
             <div className='checkoutDetail'>
-                {loading && <div style={{scale: "0.4"}}><Loading/></div>}
+                {loading && <Loading shape={ "clock" }/>}
                 {error && <p style={{ color: "red" }}> {error} </p>}
                 {orderId &&
                     <>  
                         <strong> Gracias por tu compra, tu numero de orden es {orderId} </strong>
-                        <button className='btnProductoConfirm'><Link to={`/checkoutDetail/${orderId}`} > Ver detalle </Link></button>
+                        <Link to={`/checkoutDetail/${orderId}`} ><button className='btnProductoConfirm'> Ver detalle </button></Link>
                     </>
                 }
             </div>

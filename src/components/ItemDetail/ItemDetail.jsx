@@ -17,7 +17,6 @@ const ItemDetail = ({ nombre, precio, id, img, desc, stock }) => {
     }
 
     return (
-        <>
             <div className='contenedorGroupDetail'>
                 <div className='contenedorItemDetail'>
                     <img className='imgProductoDetail' src={img} alt={nombre} />
@@ -34,7 +33,6 @@ const ItemDetail = ({ nombre, precio, id, img, desc, stock }) => {
                     }
                 </div>
             </div>
-        </>
     )
 }
 
