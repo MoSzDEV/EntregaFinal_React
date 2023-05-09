@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 
 const NavBar = () => {
-  const logSlogan = "https://cdn-icons-png.flaticon.com/512/9908/9908234.png";
+  
   return (
     <header>
 

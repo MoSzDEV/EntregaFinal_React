@@ -1,6 +1,6 @@
 # Project ReactJS: E-commerce
 
-## Inter
+## Intro
 
 Project done in ReactJS course at Coderhouse. An application that solves the needs of an e-commerce was created.
 

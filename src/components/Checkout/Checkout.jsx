@@ -121,7 +121,7 @@ const Checkout = () => {
                 </div>
             </form>
             <div className='checkoutDetail'>
-                {loading && <Loading/>}
+                {loading && <div style={{scale: "0.4"}}><Loading/></div>}
                 {error && <p style={{ color: "red" }}> {error} </p>}
                 {orderId &&
                     <>  
