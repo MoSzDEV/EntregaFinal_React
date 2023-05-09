@@ -27,7 +27,7 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-            {loading && <Loading/>}
+            {loading && <div style={{marginTop: "8rem"}}><Loading/></div>}
             <ItemDetail {...productState}/>
         </>
     )
