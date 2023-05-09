@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ContextCart } from '../../context/Contextcart'
 import { db } from '../../services/firebase/config'
 import { collection, doc, addDoc, updateDoc } from 'firebase/firestore'
+import Loading from '../Loading/Loading'
 import './Checkout.css'
 
 
@@ -120,7 +121,7 @@ const Checkout = () => {
                 </div>
             </form>
             <div className='checkoutDetail'>
-                {loading && <p>Cargando...</p>}
+                {loading && <Loading/>}
                 {error && <p style={{ color: "red" }}> {error} </p>}
                 {orderId &&
                     <>  
