@@ -23,6 +23,7 @@ export const ProviderCart = ({children}) => {
             Toastify({
                 text: "Actualizando cantidad en carrito",
                 className: "info",
+                position: "center",
                 style: {
                   background: "linear-gradient(to right, #805c00, #800080)",
                 }
@@ -49,11 +50,11 @@ export const ProviderCart = ({children}) => {
 
     const checkStock = (id) => {
         const seeStock = cart.find(prod => prod.item.id === id)
-        return seeStock.item.stock;
+        return seeStock.item.stock;    
     }
 
     return (
-        <ContextCart.Provider value={{cart, addItem, removeItem, emptyCart, checkStock}}>
+        <ContextCart.Provider value={{cart, addItem, removeItem, emptyCart, checkStock, checkCart}}>
             {children}
         </ContextCart.Provider>
     )
