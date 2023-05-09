@@ -4,6 +4,7 @@ import ItemList from '../ItemList/ItemList';
 import "./ItemListContainer.css"
 import { getDocs, collection, query, where, orderBy } from "firebase/firestore"
 import { db } from '../../services/firebase/config';
+import Loading from '../Loading/Loading';
 
 
 const ItemListContainer = () => {
@@ -26,7 +27,7 @@ const ItemListContainer = () => {
   return (
     <div>
       <h2 className='products'>Productos personalizados</h2>
-      {loading && <h2 className='products'>Cargando...</h2>}
+      {loading && <Loading/>}
       <ItemList products={products} />
     </div>
   )

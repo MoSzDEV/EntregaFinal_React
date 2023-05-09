@@ -6,11 +6,13 @@ import { ContextCart } from '../../context/Contextcart';
 const CartWidget = () => {
     const logCart = "https://cdn-icons-png.flaticon.com/512/779/779006.png";
     const {cart} = useContext(ContextCart);
+    const total = cart.reduce((total, product) => total +  product.count, 0)
+
   return (
     <div className='sectCart'>
       <Link to='/cart'>
       <img className='imgCart' src ={logCart} alt="imgCart" />
-      <strong>{cart.length}</strong>
+      <strong>{total}</strong>
       </Link>
     </div>
   )
