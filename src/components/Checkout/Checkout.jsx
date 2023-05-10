@@ -115,7 +115,7 @@ const Checkout = () => {
                     <label htmlFor="">Confirmar Email:</label>
                     <input type="email" value={emailCheck} onChange={(e) => setEmailCheck(e.target.value)} />
                     <div className='confirm'>
-                    <button className='btnProductoConfirm'> <Link to="/cart">Editar carrito</Link></button>
+                    <button className='btnProductoConfirm'><Link to="/cart">Editar carrito</Link></button>
                     <button className='btnProductoConfirm' type='submit'>Finalizar compra</button>
                     </div>
                 </div>

@@ -21,7 +21,7 @@
 }
 .imgProductoCart {
     width: 100%;
-    max-width: 200px;
+    max-width: 220px;
     height: 32vh;
     object-fit:cover;
     border-radius: 10px;
@@ -42,13 +42,14 @@
         black 1px -1px 2px,
         black -1px -1px 2px;
         font-size: calc(0.6rem + 0.2vw);
-    background: rgba(135, 135, 135, 0.315);
+        background: whitesmoke;
     font-weight: bold;
     text-decoration: none;
     width: 8rem;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
-    padding: 5px 5px;
-    margin: 10px;
-    opacity: 85%;
+    padding: 10px 5px;
+    margin: 5px;
+    margin-bottom: 20px;
+    opacity: 80%;
 }

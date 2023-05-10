@@ -3,7 +3,7 @@ import './ItemCount.css'
 
 
 
-const ItemCount = ({ stock, initial, fnAdd }) => {
+const ItemCount = ({ stock, initial, fnAdd, BotonCarrito }) => {
     const [counter, setCounter] = useState(initial);
 
 
@@ -25,7 +25,7 @@ const ItemCount = ({ stock, initial, fnAdd }) => {
             <button className="btnCart" onClick={decreaseCounter}> - </button>
             <strong className="countCart"> {counter} </strong>
             <button className="btnCart" onClick={increaseCounter}> + </button>
-            <button className="btnCart" onClick={() => fnAdd(counter)} id="boton"> Agregar al Carrito </button>
+            <button className="btnCart" onClick={() => fnAdd(counter)} id="boton">{BotonCarrito}</button>
         </div>
     )
 }
