@@ -17,7 +17,7 @@ const CartItems = ({ item, count}) => {
       <p>{item.nombre}</p>
       <p>Cantidad: {count} </p>
       <p>Valor unit: $ {item.precio}</p>
-      <div className='contenedorItemCount' style={{display:"grid", width: "110%"}}><ItemCount stock={item.stock} initial={count} fnAdd={handlerAmount} /></div>
+      <div className='contenedorItemCount' style={{display:"flex", width:"auto"}}><ItemCount BotonCarrito={"Actualizar cantidad"} stock={item.stock} initial={count} fnAdd={handlerAmount} /></div>
       <button onClick={() => removeItem(item.id)} className='btnProductoCartCard'>Eliminar</button>
     </div>
   )

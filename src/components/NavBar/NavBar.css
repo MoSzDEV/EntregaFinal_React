@@ -48,6 +48,9 @@ header {
 
 .logName {
     grid-area: a;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     font-size: calc(2rem + 1vw);
     text-decoration: none;
     margin-left: 20px;
@@ -60,6 +63,10 @@ header {
         black -1px 1px 2px,
         black 1px -1px 2px,
         black -1px -1px 2px;
+}
+.backSpin{
+    background: rgb(0,162,141);
+    background: radial-gradient(circle, rgba(0,162,141,1) 0%, rgba(255,255,255,0) 85%);
 }
 ul{
     display: flex;

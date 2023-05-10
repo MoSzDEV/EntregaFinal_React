@@ -27,7 +27,7 @@ const ItemDetail = ({ nombre, precio, id, img, desc, stock }) => {
                     {
                         checkCart(id)
                             ? <><button className="btnProducto"><Link to="/cart">En carrito 🛒</Link></button></>
-                            : <div className='contenedorItemCount' ><ItemCount stock={stock} initial={1} fnAdd={handlerAmount} /></div>
+                            : <div className='contenedorItemCount' ><ItemCount BotonCarrito={"Agregar al carrito"} stock={stock} initial={1} fnAdd={handlerAmount} /></div>
                     }
                 </div>
             </div>
