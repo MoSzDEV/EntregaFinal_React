@@ -19,21 +19,23 @@ const CheckoutDetail = () => {
                 setLoading(false);
             })
     }, [orderId])
-
+    console.log(orders)
     return (
         <div className='ticket'>
-
             <div className='ticketDetail'>
                         {loading && <div style={{marginTop: "5rem"}}><Loading shape={ "line" }/></div>}
-                {
+                {  
                         orders.map(e =>
                         <div key={e.id}>
                             <h1>Detalle de compra 💳</h1>
                             <h2>Orden N°: {e.id}</h2>
+                            <h4>Fecha de compra: {e.dateOrder}</h4>
+                            <h3>Datos de Cliente:</h3>
                             <p>Nombre: {e.name}</p>
                             <p>Apellido: {e.surname}</p>
                             <p>Tel: {e.phoneNumber}</p>
                             <p>Email: {e.email}</p>
+                            <h3>Productos:</h3>
                             {e.items.map(i =>
                                 <p key={i.producto}>Item: "{i.producto}" x {i.cantidad}u.</p>
                             )

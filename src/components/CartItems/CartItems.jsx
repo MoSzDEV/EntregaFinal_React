@@ -12,10 +12,12 @@ const CartItems = ({ item, count}) => {
   }
 
   return (
+    <>
     <div key={item.id} className='cardProductoCart'>
       <p className="itemsCart">Item: "{item.nombre}" </p>
       <p className="itemsCart">Cantidad: {count} </p>
       <p className="itemsCart">Valor unit: $ {item.precio}</p>
+      
       <div style={{display:"flex", width:"auto"}}>
         <ItemCount BotonCarrito={"Actualizar cantidad"} stock={item.stock} initial={count} fnAdd={handlerAmount} />
       </div>
@@ -23,6 +25,7 @@ const CartItems = ({ item, count}) => {
         <button onClick={() => removeItem(item.id)} className="btnDel">Eliminar</button>
         </div>
     </div>
+    </>
   )
 }
 
