@@ -21,7 +21,7 @@ export const ProviderCart = ({children}) => {
             const newQ = addQ(item.id)
             setCart([...newQ, {item, count}])
             Toastify({
-                text: "Actualizando cantidad en carrito",
+                text: "Actualizamos la informacion del carrito",
                 className: "info",
                 position: "center",
                 style: {
