@@ -19,7 +19,7 @@ const CheckoutDetail = () => {
                 setLoading(false);
             })
     }, [orderId])
-    console.log(orders)
+    
     return (
         <div className='ticket'>
             <div className='ticketDetail'>
