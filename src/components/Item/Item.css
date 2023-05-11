@@ -29,7 +29,7 @@
     }
     .imgProducto {
         width: 100%;
-        height: 40vh;
+        height: 30vh;
         object-fit:cover;
         border-radius: 10px;
         margin-bottom: 1rem;
