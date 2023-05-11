@@ -13,12 +13,15 @@ const CartItems = ({ item, count}) => {
 
   return (
     <div key={item.id} className='cardProductoCart'>
-      <img className='imgProductoCart' src={item.img} alt={item.nombre} />
-      <p>{item.nombre}</p>
-      <p>Cantidad: {count} </p>
-      <p>Valor unit: $ {item.precio}</p>
-      <div className='contenedorItemCount' style={{display:"flex", width:"auto"}}><ItemCount BotonCarrito={"Actualizar cantidad"} stock={item.stock} initial={count} fnAdd={handlerAmount} /></div>
-      <button onClick={() => removeItem(item.id)} className='btnProductoCartCard'>Eliminar</button>
+      <p className="itemsCart">Item: "{item.nombre}" </p>
+      <p className="itemsCart">Cantidad: {count} </p>
+      <p className="itemsCart">Valor unit: $ {item.precio}</p>
+      <div style={{display:"flex", width:"auto"}}>
+        <ItemCount BotonCarrito={"Actualizar cantidad"} stock={item.stock} initial={count} fnAdd={handlerAmount} />
+      </div>
+      <div >
+        <button onClick={() => removeItem(item.id)} className="btnDel">Eliminar</button>
+        </div>
     </div>
   )
 }

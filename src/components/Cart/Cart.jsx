@@ -13,13 +13,16 @@ const Cart = () => {
     if(totalCount === 0){
         return(
             <>
-                <Link to="/" className="message">Agregar productos 🎨</Link>
+                <Link to="/" className="message">Agregar productos... 🎨</Link>
             </>
         )
 
     }
     return (
         <>
+        <div className='cart'>
+            <p className='products'>Carrito de compras</p>
+        </div>
         <div className='cart'>
             {cart.map(product => <CartItems key={product.id} {...product}/>)}
         </div>

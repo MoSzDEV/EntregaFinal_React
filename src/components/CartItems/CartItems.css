@@ -1,8 +1,10 @@
 .cardProductoCart{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    min-width: 80vw;
+    background-color: rgba(121, 0, 182, 0.3);
     align-items: center;
-    background-image: url(https://www.xtrafondos.com/wallpapers/resized/perspectiva-de-edificios-desde-arriba-arte-digital-9897.jpg?s=large);
+    justify-content: right;
     background-size: cover;
     color: orange;
     text-shadow: black 1px 1px 2px,
@@ -19,17 +21,12 @@
     padding: 0.2rem;
     margin: 0.5rem;
 }
-.imgProductoCart {
-    width: 100%;
-    max-width: 220px;
-    height: 32vh;
-    object-fit:cover;
-    border-radius: 10px;
-    margin-bottom: 1rem;
+.itemsCart{
+    margin:10px;
 }
 
 .btnProductoCartCard {
-    display: grid;
+    display: flex;
     place-content: center;
     background: rgba(0, 0, 0, 0.184);
     color: orange;
@@ -53,3 +50,28 @@
     margin-bottom: 20px;
     opacity: 80%;
 }
+.btnDel{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        min-width: 15%;
+        max-width: 80%;
+        color: orange;
+        text-shadow: black 1px 1px 2px,
+            black -1px 1px 2px,
+            black 1px -1px 2px,
+            black -1px -1px 2px,
+            black 1px 1px 2px,
+            black -1px 1px 2px,
+            black 1px -1px 2px,
+            black -1px -1px 2px;
+        font-size: calc(0.6rem + 0.3vw);
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        padding: 14px;
+        margin: 10px;
+        opacity: 85%;
+    }
