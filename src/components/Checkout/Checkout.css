@@ -12,6 +12,8 @@
         black 1px -1px 2px,
         black -1px -1px 2px;
 }
+
+@media screen and (min-width: 800px) {
 .preTicket{
     display: flex;
     place-content: center;
@@ -86,5 +88,97 @@
     place-content: center;
     gap: 10px;
     padding-bottom: 10px;
+
+}
+}
+@media screen and (max-width: 800px){
+
+    
+.preTicket{
+    display: grid;
+    place-content: center;
+    margin-top: 10px;
+}
+.resume{
+    display: grid;
+    place-content: center;
+    width: 350px;
+    margin: 5px;
+}
+.subTitleCheckout{
+    display: grid;
+    font-size: calc(1rem + 3vw);
+    color: orange;
+    text-shadow: black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px,
+        black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px;
+}
+.resume h3{
+    margin-left: 20px;
+    font-size: calc(1rem + 3vw);
+}
+.resume h4{
+    font-size: calc(1rem + 1vw);
+    margin-left: 15px;
+}
+.resume p{
+    font-size: calc(1rem + 0.6vw);
+    margin-left: 10px;
+    padding: 5px
+}
+.form{
+    display: grid;
+    place-content: left;
+    width: 300px;
+    height: 55vh;
+    margin: 20px;
+    padding: 10px;
+    gap: 3px;
+    column-gap: 10px;
+}
+.confirm{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.btnProductoConfirm{
+    display: grid;
+    place-content: center;
+    background: rgba(0, 0, 0, 0.184);
+    color: orange;
+    text-shadow: black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px,
+        black 1px 1px 2px,
+        black -1px 1px 2px,
+        black 1px -1px 2px,
+        black -1px -1px 2px;
+        font-size: calc(0.7rem + 0.2vw);
+    background: rgba(135, 135, 135, 0.315);
+    font-weight: bold;
+    text-decoration: none;
+    width: 100%;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.checkoutDetail{
+    display: grid;
+    place-content: center;
+    gap: 10px;
+    padding-bottom: 10px;
+
+}
+
+.checkoutDetail strong{
+    padding: 10px;
+
+}
+
 
 }
