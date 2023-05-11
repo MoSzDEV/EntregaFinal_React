@@ -194,7 +194,7 @@ li{
         display: grid;
         justify-content: right;
         color: white;
-        margin: 15px;
+        margin: 1px;
         padding: 10px;
         cursor: pointer;
     }

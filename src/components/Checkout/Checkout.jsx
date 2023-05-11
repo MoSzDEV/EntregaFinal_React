@@ -7,6 +7,8 @@ import Loading from '../Loading/Loading'
 import './Checkout.css'
 
 
+
+
 const Checkout = () => {
 
     const { cart, emptyCart } = useContext(ContextCart)
@@ -31,7 +33,7 @@ const Checkout = () => {
 
     const handleSumbit = (e) => {
         e.preventDefault();
-        if (cart.length == 0 || !name || !surname || !phoneNumber || !email || !emailCheck) {
+        if (cart.length == 0 || !name || !surname || !email || !emailCheck) {
             setError("Por favor complete todos los campos correctamente!")
             return;
         }
@@ -40,6 +42,11 @@ const Checkout = () => {
             setError("Su e-mail y confirmacion de e-mail no coinciden")
             return;
         }
+        const date = new Date()
+        const dateOrderDay = date.getDate().toString()
+        const dateOrderMonth = date.getMonth().toString()
+        const dateOrderYear = date.getFullYear().toString()
+        const dateOrder = `${dateOrderDay}/${dateOrderMonth}/${dateOrderYear}`
 
         const orden = {
             items: cart.map((element) => ({
@@ -52,6 +59,7 @@ const Checkout = () => {
             surname,
             phoneNumber,
             email,
+            dateOrder,
         }
 
         setLoading(true);
@@ -74,7 +82,6 @@ const Checkout = () => {
             discountStock(error, e.item.id, e.item.stock, e.count)
         ))
 
-
         setName("");
         setSurname("");
         setPhoneNumber("");
@@ -82,6 +89,7 @@ const Checkout = () => {
         setEmailCheck("");
         setError("");
     }
+
 
     return (
         <div >
@@ -105,15 +113,15 @@ const Checkout = () => {
                 </div>
                 <div className='form'>
                     <label htmlFor="">Nombre:</label>
-                    <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+                    <input type="text" placeholder ="Nombre..." autoFocus value={ name } onChange={(e) => setName(e.target.value)} />
                     <label htmlFor="">Apellido:</label>
-                    <input type="text" value={surname} onChange={(e) => setSurname(e.target.value)} />
+                    <input type="text" placeholder ="Apellido..."value={ surname } onChange={(e) => setSurname(e.target.value)} />
                     <label htmlFor="">Telefono:</label>
-                    <input type="number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+                    <input type="number" placeholder ="Ej: 011-xxxx-xxxx" value={ phoneNumber } onChange={(e) => setPhoneNumber(e.target.value)} />
                     <label htmlFor="">Email:</label>
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <input type="email" placeholder ="ejemplo@mail.com" value={ email } onChange={(e) => setEmail(e.target.value)} />
                     <label htmlFor="">Confirmar Email:</label>
-                    <input type="email" value={emailCheck} onChange={(e) => setEmailCheck(e.target.value)} />
+                    <input type="email" placeholder ="ejemplo@mail.com" value={ emailCheck } onChange={(e) => setEmailCheck(e.target.value)} /> 
                     <div className='confirm'>
                     <button className='btnProductoConfirm'><Link to="/cart">Editar carrito</Link></button>
                     <button className='btnProductoConfirm' type='submit'>Finalizar compra</button>

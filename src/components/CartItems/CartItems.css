@@ -1,6 +1,89 @@
+@media screen and (min-width: 800px){
+    
+    .cardProductoCart{
+        display: flex;
+        flex-direction: row;
+        min-width: 80vw;
+        background-color: rgba(121, 0, 182, 0.3);
+        align-items: center;
+        justify-content: right;
+        background-size: cover;
+        color: orange;
+        text-shadow: black 1px 1px 2px,
+            black -1px 1px 2px,
+            black 1px -1px 2px,
+            black -1px -1px 2px,
+            black 1px 1px 2px,
+            black -1px 1px 2px,
+            black 1px -1px 2px,
+            black -1px -1px 2px;
+            font-size: calc(1rem + 0.3vw);
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 0.2rem;
+        margin: 0.5rem;
+    }
+    .itemsCart{
+        margin:10px;
+    }
+    
+    .btnProductoCartCard {
+        display: flex;
+        place-content: center;
+        background: rgba(0, 0, 0, 0.184);
+        color: orange;
+        text-shadow: black 1px 1px 2px,
+            black -1px 1px 2px,
+            black 1px -1px 2px,
+            black -1px -1px 2px,
+            black 1px 1px 2px,
+            black -1px 1px 2px,
+            black 1px -1px 2px,
+            black -1px -1px 2px;
+            font-size: calc(0.6rem + 0.2vw);
+            background: whitesmoke;
+        font-weight: bold;
+        text-decoration: none;
+        width: 8rem;
+        border-radius: 8px;
+        cursor: pointer;
+        padding: 10px 5px;
+        margin: 5px;
+        margin-bottom: 20px;
+        opacity: 80%;
+    }
+    .btnDel{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            min-width: 15%;
+            max-width: 80%;
+            color: orange;
+            text-shadow: black 1px 1px 2px,
+                black -1px 1px 2px,
+                black 1px -1px 2px,
+                black -1px -1px 2px,
+                black 1px 1px 2px,
+                black -1px 1px 2px,
+                black 1px -1px 2px,
+                black -1px -1px 2px;
+            font-size: calc(0.6rem + 0.3vw);
+            font-weight: bold;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            padding: 14px;
+            margin: 10px;
+            opacity: 85%;
+        }
+    }
+
+@media screen and (max-width: 800px){
+    
 .cardProductoCart{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    justify-items: center;
     min-width: 80vw;
     background-color: rgba(121, 0, 182, 0.3);
     align-items: center;
@@ -74,4 +157,5 @@
         padding: 14px;
         margin: 10px;
         opacity: 85%;
+    }
     }
