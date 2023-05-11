@@ -30,6 +30,7 @@ const Checkout = () => {
         }
         return;
     }
+    
 
     const handleSumbit = (e) => {
         e.preventDefault();
@@ -42,11 +43,10 @@ const Checkout = () => {
             setError("Su e-mail y confirmacion de e-mail no coinciden")
             return;
         }
+            
         const date = new Date()
-        const dateOrderDay = date.getDate().toString()
-        const dateOrderMonth = date.getMonth().toString()
-        const dateOrderYear = date.getFullYear().toString()
-        const dateOrder = `${dateOrderDay}/${dateOrderMonth}/${dateOrderYear}`
+        const month = date.getMonth()+1
+        const dateOrder = `${date.getDate().toString()}/${month}/${date.getFullYear().toString()}`
 
         const orden = {
             items: cart.map((element) => ({
